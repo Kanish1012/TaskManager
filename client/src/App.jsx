@@ -5,10 +5,10 @@ import Users from "./pages/Users";
 import Trash from "./pages/Trash";
 import TaskDetails from "./pages/TaskDetails";
 import { Routes, Route, Navigate, Outlet, useLocation } from "react-router-dom";
-import Toaster from "sonner";
+import { Toaster } from "sonner";
 
 function Layout() {
-    const user = "";
+    const user = "K";
     const location = useLocation();
 
     return user ? (
@@ -17,11 +17,13 @@ function Layout() {
                 {/*<Sidebar/>*/}
             </div>
 
-            {/* <ModileSidebar/> */}
+            {/* <MobileSidebar/> */}
 
             <div className="flex-1 overflow-y-auto">
                 {/* <Navbar/> */}
-                <div className="p-4 2xl:px-10">{/* <Outlet/> */}</div>
+                <div className="p-4 2xl:px-10">
+                    <Outlet />
+                </div>
             </div>
         </div>
     ) : (
